@@ -220,7 +220,30 @@
     }
     else if (k === 'h' || k === 'H') { help.classList.toggle('hide'); }
   });
-  root.addEventListener('click', next);
+  root.addEventListener('click', function () {
+    if (swiped) { swiped = false; return; } // a swipe should not also count as a tap
+    next();
+  });
+
+  // touch: tap = advance, horizontal swipe right = back, swipe left = advance
+  var touchX = null, touchY = null, swiped = false;
+  root.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) return;
+    touchX = e.touches[0].clientX; touchY = e.touches[0].clientY; swiped = false;
+  }, { passive: true });
+  root.addEventListener('touchend', function (e) {
+    if (touchX === null) return;
+    var dx = e.changedTouches[0].clientX - touchX;
+    var dy = e.changedTouches[0].clientY - touchY;
+    touchX = touchY = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      swiped = true;
+      if (dx > 0) prev(); else next();
+    }
+  }, { passive: true });
+  if ('ontouchstart' in window) {
+    help.innerHTML = 'Tap to advance. Swipe right to go back.';
+  }
 
   // presenter clock
   setInterval(function () {

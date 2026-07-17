@@ -35,20 +35,20 @@
   // Waypoint = a stop. pos: {leg, t} on the video chain. scene: index into STILLS
   // (fallback mode + poster). video:true opens the founder panel.
   var WP = [
-    { pos: { leg: 0, t: 0 }, scene: 0, chip: 'Jarvis Daily', head: 'No time to work <em>on</em> your business?', sub: 'Shruti Pethkar. We build AI staff for Pune businesses.', byline: true },
-    { pos: { leg: 0, t: 1 }, scene: 1, chip: 'Two people I know', head: 'Two Pune owners put AI to work.', sub: 'Not tech companies. Enquiries answered in seconds. A calendar that fills itself.' },
-    { pos: { leg: 1, t: 1 }, scene: 2, chip: 'Inside their businesses', head: 'Faster work. Better work. Lower cost.', sub: 'One good person becomes a small team. Work moves 30-35% faster.' },
-    { pos: { leg: 2, t: 1 }, scene: 3, chip: 'The wrong moves', head: 'Your nephew is not a plan for AI.', sub: 'Neither is buying fourteen apps and changing nothing.' },
-    { pos: { leg: 3, t: 1 }, scene: 4, chip: 'The right move', head: 'A 45-minute audit <em>on</em> your business.', sub: 'We find where AI fits. Any industry. The report stays yours.' },
-    { pos: { leg: 4, t: 1 }, scene: 5, chip: 'What we build', head: 'Enquiry in. Rate sent. Order booked.', sub: 'A WhatsApp AI employee, trained on YOUR data. Your business. Your system.', receipt: ['40 units, Baner, by Friday?', 'Stock checked. Rate sent.', 'Order booked.'] },
-    { pos: { leg: 5, t: 1 }, scene: 6, chip: 'True story', head: 'Our service became his product.', sub: 'We built one for a realty client. He now sells it as Realty Connect.' },
-    { pos: { leg: 6, t: 1 }, scene: 7, chip: 'Not just WhatsApp', head: 'Follow-ups. Accounts. Proposals. Handled.', sub: 'AI staff working <em>in</em> your business, beside your team.', receipt: ['3 old quotations chased. 1 reply in.', 'Bank statement checked. 1 overdue flagged.', "Tuesday's call. Drafted the same day."] },
-    { pos: { leg: 6, t: 1 }, scene: 7, chip: 'We train your team too', head: 'One workshop. Your team 25% faster.', sub: 'Measured, not promised. We do not just install AI. We build the habit.' },
-    { pos: { leg: 7, t: 1 }, scene: 8, chip: 'Nobody tells you this', head: 'Teach it once. It remembers forever.', sub: "Your company's second brain. It does not resign." },
-    { pos: { leg: 7, t: 1 }, scene: 8, chip: 'The dream', head: 'All your AI staff. One team.', sub: 'We call it the Agent OS. They even hold their own morning meeting.' },
+    { pos: { leg: 0, t: 0 }, scene: 0, chip: 'Jarvis Daily', head: 'Everyone talks about AI. Nobody knows where it fits.', sub: 'Shruti Pethkar. Jarvis Daily. We build AI employees for businesses.', byline: true },
+    { pos: { leg: 0, t: 1 }, scene: 1, chip: 'Clearing the confusion', head: 'AI is not a robot. It is an extra pair of hands.', sub: "It does the boring, repeated work. The work that quietly eats your team's day." },
+    { pos: { leg: 1, t: 1 }, scene: 2, chip: 'The real point', head: 'AI does not replace your people. It frees them.', sub: 'The machine does the repeat work. Your people meet customers, sell, and grow.' },
+    { pos: { leg: 2, t: 1 }, scene: 3, chip: 'The wrong way', head: 'Your nephew is not an AI strategy.', sub: 'Neither is buying five apps and changing nothing.' },
+    { pos: { leg: 3, t: 1 }, scene: 4, chip: 'The simple first step', head: 'A simple 45-minute audit.', sub: 'We find exactly where AI is needed in your business. Clear report. No jargon.' },
+    { pos: { leg: 4, t: 1 }, scene: 5, chip: 'True story one', head: 'Enquiries all day. A team that could not keep up.', sub: 'A real-estate company. We built a WhatsApp AI assistant, trained on their projects and prices.', receipt: ['2 BHK in Baner. Possession date?', 'Answered in seconds.', 'Site visit booked.'] },
+    { pos: { leg: 5, t: 1 }, scene: 6, chip: 'True story one &middot; today', head: 'He liked it so much, he now sells it.', sub: 'Every enquiry answered, day and night. Our service became his product: Realty Connect.' },
+    { pos: { leg: 6, t: 1 }, scene: 7, chip: 'True story two', head: 'Good team. Too much slow, repeated work.', sub: 'A medical software company. One hands-on workshop. AI set up inside their real daily work.' },
+    { pos: { leg: 6, t: 1 }, scene: 7, chip: 'True story two &middot; today', head: 'The same team. 25% faster. Measured.', sub: 'They use AI every day now.', receipt: ['Team works 25% faster', 'Measured by them, not by us', 'Nobody lost a job'] },
+    { pos: { leg: 7, t: 1 }, scene: 8, chip: 'The pattern', head: 'Boring work handled. People free to grow.', sub: 'Every business has this hidden time. It is hard to see it from the inside.' },
+    { pos: { leg: 7, t: 1 }, scene: 8, chip: 'Any industry', head: 'We know which AI works where.', sub: 'We work across industries. You do not experiment. You get what is already proven.' },
     { pos: { leg: 7, t: 1 }, scene: 8, chip: 'Not just talk', head: 'This is our own office. This is real.', sub: 'I run Jarvis Daily on Jarvis Daily.', video: true },
-    { pos: { leg: 8, t: 1 }, scene: 9, chip: 'My five gives', head: 'The audit is free.', sub: 'Five things you can take, even if we never work together.', receipt: ['A free 45-minute AI audit. Report is yours.', 'A live WhatsApp demo on your real task.', 'A one-hour AI session for your team.', 'A sample AI proposal from your call recording.', 'A straight answer, even if it is no.'] },
-    { pos: { leg: 8, t: 1 }, scene: 9, chip: 'My five asks - Pune first', head: 'You work <em>on</em> it. We work <em>in</em> it.', sub: 'Jarvis Daily. Built for you, not by you.', receipt: ['Owners drowning in WhatsApp enquiries', 'Founders whose quotations get no follow-up', 'Software heads who want AI training', 'Studios who want an AI team', 'CAs and consultants - referral partners'] }
+    { pos: { leg: 8, t: 1 }, scene: 9, chip: 'For anyone you send', head: 'The audit is free. The report is theirs.', sub: 'Forty-five minutes. Plain language. No pressure.', receipt: ['45-minute audit - free', 'Clear report - theirs to keep', 'Plain language - no pressure'] },
+    { pos: { leg: 8, t: 1 }, scene: 9, chip: 'My specific ask', head: 'Who I want to meet.', sub: 'Business owners outside BNI, not members. Jarvis Daily. Built for you, not by you.', receipt: ['Builders and real-estate developers', 'Owners of software and IT companies', 'Manufacturers and traders with WhatsApp full of enquiries', 'Anyone who says: AI, but where do I start?'] }
   ];
 
   var TWEEN_PER_LEG = 2.4;   // seconds of real time to traverse one full leg

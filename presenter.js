@@ -36,18 +36,14 @@
   // (fallback mode + poster). video:true opens the founder panel.
   var WP = [
     { pos: { leg: 0, t: 0 }, scene: 0, chip: 'Jarvis Daily', head: 'Everyone talks about AI. Nobody knows where it fits.', sub: 'Shruti Pethkar. Jarvis Daily. We build AI employees for businesses.', byline: true },
-    { pos: { leg: 0, t: 1 }, scene: 1, chip: 'Clearing the confusion', head: 'AI is not a robot. It is an extra pair of hands.', sub: "It does the boring, repeated work. The work that quietly eats your team's day." },
+    { pos: { leg: 0, t: 1 }, scene: 1, chip: 'What AI really is', head: 'AI is not a robot. It is an extra pair of hands.', sub: 'It does the boring, repeated work. The same answers. The same quotation. The same follow-up.' },
     { pos: { leg: 1, t: 1 }, scene: 2, chip: 'The real point', head: 'AI does not replace your people. It frees them.', sub: 'The machine does the repeat work. Your people meet customers, sell, and grow.' },
-    { pos: { leg: 2, t: 1 }, scene: 3, chip: 'The wrong way', head: 'Your nephew is not an AI strategy.', sub: 'Neither is buying five apps and changing nothing.' },
-    { pos: { leg: 3, t: 1 }, scene: 4, chip: 'The simple first step', head: 'A simple 45-minute audit.', sub: 'We find exactly where AI is needed in your business. Clear report. No jargon.' },
-    { pos: { leg: 4, t: 1 }, scene: 5, chip: 'True story one', head: 'Enquiries all day. A team that could not keep up.', sub: 'A real-estate company. We built a WhatsApp AI assistant, trained on their projects and prices.', receipt: ['2 BHK in Baner. Possession date?', 'Answered in seconds.', 'Site visit booked.'] },
-    { pos: { leg: 5, t: 1 }, scene: 6, chip: 'True story one &middot; today', head: 'He liked it so much, he now sells it.', sub: 'Every enquiry answered, day and night. Our service became his product: Realty Connect.' },
-    { pos: { leg: 6, t: 1 }, scene: 7, chip: 'True story two', head: 'Good team. Too much slow, repeated work.', sub: 'A medical software company. One hands-on workshop. AI set up inside their real daily work.' },
-    { pos: { leg: 6, t: 1 }, scene: 7, chip: 'True story two &middot; today', head: 'The same team. 25% faster. Measured.', sub: 'They use AI every day now.', receipt: ['Team works 25% faster', 'Measured by them, not by us', 'Nobody lost a job'] },
-    { pos: { leg: 7, t: 1 }, scene: 8, chip: 'The pattern', head: 'Boring work handled. People free to grow.', sub: 'Every business has this hidden time. It is hard to see it from the inside.' },
-    { pos: { leg: 7, t: 1 }, scene: 8, chip: 'Any industry', head: 'We know which AI works where.', sub: 'We work across industries. You do not experiment. You get what is already proven.' },
-    { pos: { leg: 7, t: 1 }, scene: 8, chip: 'Not just talk', head: 'This is our own office. This is real.', sub: 'I run Jarvis Daily on Jarvis Daily.', video: true },
-    { pos: { leg: 8, t: 1 }, scene: 9, chip: 'For anyone you send', head: 'The audit is free. The report is theirs.', sub: 'Forty-five minutes. Plain language. No pressure.', receipt: ['45-minute audit - free', 'Clear report - theirs to keep', 'Plain language - no pressure'] },
+    { pos: { leg: 2, t: 1 }, scene: 3, chip: 'Why owners get stuck', head: 'Five apps. Ten videos. Nothing changes.', sub: 'The question is not which app. The question is where AI fits in YOUR business.' },
+    { pos: { leg: 3, t: 1 }, scene: 4, chip: 'How we work', head: 'We find it. We build it. We run it.', sub: 'You do not have to learn anything technical. That is our job.', receipt: ['Step 1 - A 45-minute audit finds where AI is needed', 'Step 2 - We build your AI staff and set it up', 'Step 3 - It runs every day. We keep it running.'] },
+    { pos: { leg: 4, t: 1 }, scene: 5, chip: 'Customer one', head: 'Realty Connect: no enquiry left waiting.', sub: 'A real-estate company. Their WhatsApp AI assistant answers day and night. The owner now sells it to other builders as his own product.', receipt: ['2 BHK in Baner. Possession date?', 'Answered in seconds.', 'Site visit booked.'] },
+    { pos: { leg: 6, t: 1 }, scene: 7, chip: 'Customer two', head: 'The same team. 25% faster. Measured.', sub: 'A medical software company. One hands-on workshop. Their team now uses AI every day.', receipt: ['Team works 25% faster', 'Measured by them, not by us', 'Nobody lost a job'] },
+    { pos: { leg: 7, t: 1 }, scene: 8, chip: 'Customer three', head: 'A design studio that runs on an AI team.', sub: 'Monsoonfish, Pune. We run their AI staff daily. And we run Jarvis Daily the same way - this is our own office.', video: true },
+    { pos: { leg: 8, t: 1 }, scene: 9, chip: 'My gives', head: 'Businesses I can introduce you to.', sub: 'People I know and trust. Ask me for a direct introduction.', receipt: ['Sanas Cranes - crane rental and heavy lifting', 'Riseco Infra - civil construction', 'iDesign Architects - architecture studio', 'Posimind - executive search', 'Excellence Farms - farm produce'] },
     { pos: { leg: 8, t: 1 }, scene: 9, chip: 'My specific ask', head: 'Who I want to meet.', sub: 'Business owners outside BNI, not members. Jarvis Daily. Built for you, not by you.', receipt: ['Builders and real-estate developers', 'Owners of software and IT companies', 'Manufacturers and traders with WhatsApp full of enquiries', 'Anyone who says: AI, but where do I start?'] }
   ];
 
@@ -72,7 +68,7 @@
   var rail = document.createElement('div'); rail.className = 'rail';
   var clock = document.createElement('div'); clock.className = 'clock'; clock.textContent = '0:00';
   var help = document.createElement('div'); help.className = 'help';
-  help.innerHTML = 'Advance: click / space / PageDown / arrows. Back: PageUp. Jump: 1-9, 0 = 10, Shift+1..4 = 11-14. F fullscreen. H hide this.';
+  help.innerHTML = 'Advance: click / space / PageDown / arrows. Back: PageUp. Jump: 1-9, 0 = 10. F fullscreen. H hide this.';
   root.appendChild(layerStills); root.appendChild(layerVideo); root.appendChild(copyEl);
   root.appendChild(founder); root.appendChild(rail); root.appendChild(clock); root.appendChild(help);
 
@@ -209,9 +205,6 @@
     else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp') { e.preventDefault(); prev(); }
     else if (k === 'Home') { go(0); }
     else if (k === 'End') { go(WP.length - 1); }
-    else if (e.shiftKey && ((k >= '1' && k <= '4') || '!@#$'.indexOf(k) >= 0)) {
-      go({'1': 10, '!': 10, '2': 11, '@': 11, '3': 12, '#': 12, '4': 13, '$': 13}[k]);
-    }
     else if (k >= '1' && k <= '9' && !e.shiftKey) { go(parseInt(k, 10) - 1); }
     else if (k === '0') { go(9); }
     else if (k === 'f' || k === 'F') {
